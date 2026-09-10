@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DailyBuy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" id="brandHome">DailyBuy</div>
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Search for products, brands and more">
+      <button id="searchBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.2" y2="16.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <button class="cart-btn" id="cartBtn">
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.3" fill="currentColor"/><circle cx="18" cy="21" r="1.3" fill="currentColor"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+      <span class="cart-label">Cart</span>
+    </button>
+  </div>
+  <nav class="category-row" id="categoryRow"></nav>
+</header>
+
+<section class="promo-strip">
+  <div class="promo-inner">
+    <div>
+      <p class="promo-eyebrow">Today's deals</p>
+      <h1 class="promo-title">Big discounts across every category</h1>
+      <p class="promo-sub">Handpicked drops, refreshed daily. Free delivery over ₹499.</p>
+    </div>
+  </div>
+</section>
+
+<main class="shell">
+  <p class="results-line" id="resultsLine"></p>
+  <div class="grid" id="productGrid"></div>
+</main>
+
+<!-- Cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h2>Your cart</h2>
+    <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="cart-subtotal-row">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">₹0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to checkout</button>
+  </div>
+</aside>
+
+<!-- Checkout view -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-panel">
+    <button class="back-link" id="backToShop">← Back to shop</button>
+    <div id="checkoutContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
